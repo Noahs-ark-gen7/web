@@ -6,13 +6,13 @@ import 'firebaseui/dist/firebaseui.css'
 import { useEffect } from 'react';
 
 // Auth service
-import {auth} from '../src/firebase'
+import {auth} from '../firebase/firebase'
 
 export default () => {
     useEffect(() => {
         const uiConfig = {
             signInFlow: "popup",
-            signInSuccessUrl: "/", // redirect URL after successful login
+            signInSuccessUrl: "/contents", // redirect URL after successful login
             signInOptions: [
                 firebase.auth.GoogleAuthProvider.PROVIDER_ID
             ],
