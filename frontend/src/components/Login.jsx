@@ -6,7 +6,7 @@ import MyComponent from "./MyComponent";
 import { useEffect } from "react";
 
 // Auth service
-import { auth } from "../firebase/firebase";
+import { auth } from "../../firebase/firebase";
 import { useNavigate } from "react-router";
 import { onAuthStateChanged } from "firebase/auth";
 
@@ -34,10 +34,10 @@ export default () => {
     }, []);
 
     return (
-        <>
+        <div>
             <MyComponent />
             <div id="firebaseui-auth-container"></div>
             <div id="loader" className="text-center"></div>
-        </>
+        </div>
     );
 };
